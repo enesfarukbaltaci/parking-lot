@@ -8,17 +8,17 @@ public class Car {
 
     /**
      * Constructor for the Car class.
-     * @param registrationNumber the car's registration number
+     * @param plateNumber the car's plate number
      * @param ownerName the name of the car's owner
      */
-    public Car(String registrationNumber, String ownerName) {
-        this.plateNumber = registrationNumber;
+    public Car(String plateNumber, String ownerName) {
+        this.plateNumber = plateNumber;
         this.ownerName = ownerName;
     }
 
     /**
-     * Gets the car's registration number.
-     * @return the registration number
+     * Gets the car's plate number.
+     * @return the plate number
      */
     public String getPlateNumber() {
         return plateNumber;
@@ -34,7 +34,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return"Car[Reg: " + plateNumber + ", Owner: " + ownerName + "]";
+        return"Car[Plate Number: " + plateNumber + ", Owner: " + ownerName + "]";
     }
 
 }
