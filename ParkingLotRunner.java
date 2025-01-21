@@ -17,6 +17,7 @@ public class ParkingLotRunner {
             System.out.println("2. Retrieve a car");
             System.out.println("3. View a parking lot status");
             System.out.println("4. Exit");
+            System.out.println("5. I lost my car :(");
             System.out.print("Please select what you want : ");
 
             choice = scanner.nextInt();
@@ -41,6 +42,14 @@ public class ParkingLotRunner {
                     break;
                 case 4 :
                     System.out.println("Exiting.. Thank you!");
+                case 5 :
+                    System.out.print("Enter your name : ");
+                    String lostOwnerName = scanner.nextLine();
+                    boolean found = parkingLot.findCarByOwner(lostOwnerName);
+                    if(!found){
+                        System.out.println("No car found for owner : " + lostOwnerName);
+                    }
+                    break;
                 default:
                     System.out.println("Invalid choice! Please try again.");
             }
