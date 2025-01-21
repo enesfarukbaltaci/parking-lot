@@ -80,5 +80,17 @@ public class ParkingLot {
         System.out.println("Total Parked Cars: " + totalParkedCars);
     }
 
+    public boolean findCarByOwner(String ownerName){
+        for (int level = 0; level < parkingSlots.length; level++) {
+            for (int slot = 0; slot < parkingSlots[level].length ; slot++) {
+                if(parkingSlots[level][slot]!= null && parkingSlots[level][slot].getOwnerName().equalsIgnoreCase(ownerName)){
+                    System.out.println("Car owned by " + ownerName + " is located at : ");
+                    System.out.println("Level " + (level + 1 ) + ", Slot " + (slot+1));
+                    return true;
+                }
+            }
+        }
+        return false; //If no car is found
+    }
 
 }
